@@ -48,7 +48,8 @@ public class SliderSelector : MonoBehaviour
     {
         updateFloatVal();
         // add a force that pushes the slider towards the nearest integer value
-        sliderRigidbody.AddForce(0, 0, returnKP * (floatVal - nearestInt));
+        Vector3 force = transform.TransformVector(0, 0, returnKP * -(floatVal - nearestInt));
+        sliderRigidbody.AddForce(force);
 
         // only update the label if slider is outside threshold; for efficiency purposes
         if (Mathf.Clamp(floatVal, nearestInt - .3f, nearestInt + .3f) != floatVal)
