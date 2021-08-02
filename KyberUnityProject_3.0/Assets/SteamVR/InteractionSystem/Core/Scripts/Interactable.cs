@@ -153,10 +153,7 @@ namespace Valve.VR.InteractionSystem
 
             hoveringHands.Add(hand);
 
-            if (highlightOnHover == true && wasHovering == false)
-            {
-                outline.enabled = true;
-            }
+            outline.enabled = true;
         }
 
 
@@ -169,10 +166,7 @@ namespace Valve.VR.InteractionSystem
 
             hoveringHands.Remove(hand);
 
-            if (hoveringHands.Count == 0)
-            {
-                outline.enabled = false;
-            }
+            outline.enabled = false;
         }
 
 

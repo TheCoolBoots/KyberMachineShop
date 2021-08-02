@@ -3,9 +3,14 @@ using UnityEngine;
 using UnityEngine.Events;
 public class RockerSwitch : MonoBehaviour
 {
-    [SerializeField] private TextMeshPro currentState;
     [SerializeField] private HingeJoint switchHingeJoint;
     [SerializeField] private Rigidbody switchRigidbody;
+    [SerializeField] private AudioSource onSoundEffect;
+    [SerializeField] private AudioSource offSoundEffect;
+    [SerializeField] private AudioSource windUpDrill;
+    [SerializeField] private AudioSource continuousDrill;
+    [SerializeField] private AudioSource windDownDrill;
+
 
     [Space]
     [SerializeField] private UnityEvent switchOnEvents;
@@ -44,9 +49,22 @@ public class RockerSwitch : MonoBehaviour
         }
 
         if (on && !lastState)
+        {
+            onSoundEffect.Play();
+            windUpDrill.Play();
+            windDownDrill.Pause();
+            continuousDrill.Play();
             switchOnEvents.Invoke();
+        }
+            
         else if (!on && lastState)
+        {
+            offSoundEffect.Play();
+            windDownDrill.Play();
+            continuousDrill.Pause();
             switchOffEvents.Invoke();
+        }
+            
 
         lastState = on;
     }
