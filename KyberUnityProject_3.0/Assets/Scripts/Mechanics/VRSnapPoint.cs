@@ -10,6 +10,7 @@ public class VRSnapPoint : MonoBehaviour
     [SerializeField] private Transform snapPoint;
     [SerializeField] private MeshRenderer colliderBoundsIndicator;
     [SerializeField] private Collider activationThreshold;
+    [SerializeField] private bool useTypeFilter;
 
     [Space]
     [SerializeField] private UnityEvent engageEvents;
@@ -41,7 +42,7 @@ public class VRSnapPoint : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         // if snap point is empty, and component colliding with snap point has a Interactable && Throwable component
-        if (!snapPointOccipied && other.GetComponent<Interactable>() != null && other.GetComponent<Throwable>() != null)
+        if (!snapPointOccipied && other.GetComponent<Interactable>() != null)
         {
             if (!colliderBoundsIndicator.enabled)
             {
