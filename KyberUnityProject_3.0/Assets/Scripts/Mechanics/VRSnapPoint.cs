@@ -5,12 +5,17 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 using UnityEngine.Events;
 
+
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(FixedJoint))]
 public class VRSnapPoint : MonoBehaviour
 {
     [SerializeField] private Transform snapPoint;
     [SerializeField] private MeshRenderer colliderBoundsIndicator;
     [SerializeField] private Collider activationThreshold;
-    [SerializeField] private bool useTypeFilter;
+    [SerializeField] private Rigidbody snapRigidbody;
+    [SerializeField] private FixedJoint fixedJoint;
+
 
     [Space]
     [SerializeField] private UnityEvent engageEvents;
@@ -20,6 +25,8 @@ public class VRSnapPoint : MonoBehaviour
     public bool snapPointOccipied = false;
     public GameObject currentSnappedItem;
 
+
+
     private void Awake()
     {
         if (snapPoint == null)
@@ -28,9 +35,13 @@ public class VRSnapPoint : MonoBehaviour
             colliderBoundsIndicator = GetComponent<MeshRenderer>();
         if (activationThreshold == null)
             activationThreshold = GetComponent<Collider>();
-
+        if (fixedJoint == null)
+            fixedJoint = GetComponent<FixedJoint>();
+        if (snapRigidbody == null)
+            snapRigidbody = GetComponent<Rigidbody>();
         activationThreshold.isTrigger = true;
         colliderBoundsIndicator.enabled = false;
+
     }
 
 
@@ -72,7 +83,8 @@ public class VRSnapPoint : MonoBehaviour
         // Debug.Log("Engaging item");
         other.gameObject.transform.position = snapPoint.position;
         other.gameObject.transform.rotation = snapPoint.rotation;
-        other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        fixedJoint.connectedBody = other.gameObject.GetComponent<Rigidbody>();
+        // other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         snapPointOccipied = true;
         currentSnappedItem = other.gameObject;
         colliderBoundsIndicator.enabled = false;
@@ -81,7 +93,8 @@ public class VRSnapPoint : MonoBehaviour
 
     private void DisengageItem(GameObject canister)
     {
-        canister.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        fixedJoint.connectedBody = null;
+        // canister.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         snapPointOccipied = false;
         disengageEvents.Invoke();
     }

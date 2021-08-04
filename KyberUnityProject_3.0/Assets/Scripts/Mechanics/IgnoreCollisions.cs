@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class IgnoreCollisions : MonoBehaviour
 {
-    [SerializeField] private Collider collider1;
-    [SerializeField] private Collider collider2;
+    [SerializeField] private Collider rootCollider;
+    [SerializeField] private System.Collections.Generic.List<Collider> collidersToIgnore;
 
     private void Awake()
     {
-        Physics.IgnoreCollision(collider1, collider2, true);
+        foreach(Collider c in collidersToIgnore)
+        {
+            Physics.IgnoreCollision(c, rootCollider, true);
+        }
+        
     }
 } 

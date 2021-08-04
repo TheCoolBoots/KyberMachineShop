@@ -475,8 +475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c71d0fbf2547ec49aa41b4c61f24014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider1: {fileID: 0}
-  collider2: {fileID: 5315189745546349106}
+  rootCollider: {fileID: 5315189745546349106}
+  collidersToIgnore: []
 --- !u!153 &2797291456796537903
 ConfigurableJoint:
   m_ObjectHideFlags: 0

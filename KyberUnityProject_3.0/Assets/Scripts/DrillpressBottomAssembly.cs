@@ -5,8 +5,8 @@ using UnityEngine;
 public class DrillpressBottomAssembly : MonoBehaviour
 {
     [SerializeField] private ContinuousFloatKnob heightChanger;
-    [SerializeField] private Transform woodblockSnapPoint;
     [SerializeField] [Tooltip("the worldspace distance travelled by one rotation of the height changer knob")] private float travelDistance;
+    [SerializeField] private VRSnapPoint woodblockSnapPoint;
 
     private float startYPos;
     private float outputVal;
@@ -20,7 +20,7 @@ public class DrillpressBottomAssembly : MonoBehaviour
     void Update()
     {
         outputVal = map(heightChanger.actualAngle, 0, 360, 1, 0);
-        transform.position = new Vector3(transform.position.x, startYPos - outputVal * travelDistance, transform.position.z);
+        transform.localPosition = new Vector3(transform.localPosition.x, startYPos - outputVal * travelDistance, transform.localPosition.z);
     }
 
     private float map(float val, float a1, float b1, float a2, float b2)
