@@ -23,8 +23,8 @@ public class DrillpressWoodblock : MonoBehaviour
     {
         if(!drilledThrough && topCap.transform.localPosition.z <= botCap.transform.localPosition.z)
         {
-            Destroy(topCap);
-            Destroy(botCap);
+            topCap.SetActive(false);
+            botCap.SetActive(false);
             drilledThrough = true;
         }
     }

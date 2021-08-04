@@ -12,6 +12,9 @@ public class FloatKnob : MonoBehaviour
     [Space]
     public float outputVal = 0;
 
+    private float minAngle;
+    private float maxAngle;
+
     void Start()
     {
         if(knobHingeJoint == null)
@@ -20,15 +23,18 @@ public class FloatKnob : MonoBehaviour
             if (knobHingeJoint == null)
                 Debug.LogError($"{gameObject.name} does not have hingeJoint component attached to it");
         }
+
+        minAngle = knobHingeJoint.limits.min;
+        maxAngle = knobHingeJoint.limits.max;
     }
 
     private void Update()
     {
         // Debug.Log(transform.localRotation.eulerAngles.y);
         if(transform.localRotation.eulerAngles.y < 180)
-            outputVal = map(transform.localRotation.eulerAngles.y, knobHingeJoint.limits.min, knobHingeJoint.limits.max, sliderOutputRange.x, sliderOutputRange.y);
+            outputVal = map(transform.localRotation.eulerAngles.y, minAngle, maxAngle, sliderOutputRange.x, sliderOutputRange.y);
         else
-            outputVal = map(transform.localRotation.eulerAngles.y - 360, knobHingeJoint.limits.min, knobHingeJoint.limits.max, sliderOutputRange.x, sliderOutputRange.y);
+            outputVal = map(transform.localRotation.eulerAngles.y - 360, minAngle, maxAngle, sliderOutputRange.x, sliderOutputRange.y);
         outputLabel.text = outputVal.ToString("F3");
     }
 

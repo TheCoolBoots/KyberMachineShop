@@ -1231,7 +1231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2375798199922246232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.757, z: 0.025}
+  m_LocalPosition: {x: 0, y: -0.652, z: 0.025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2375798200285686250}
@@ -3589,6 +3589,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2375798201259235146}
+        m_MethodName: OnDrillStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   switchOffEvents:
     m_PersistentCalls:
       m_Calls:
@@ -3606,6 +3617,17 @@ MonoBehaviour:
       - m_Target: {fileID: 2375798199859666923}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2375798201259235146}
+        m_MethodName: OnDrillStop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4086,10 +4108,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerSwitch: {fileID: 2375798200894137008}
-  heightKnob: {fileID: 2375798200757418112}
   windUpDrill: {fileID: 8497716518620687953}
   continuousDrill: {fileID: 1851319147720889099}
   windDownDrill: {fileID: 6890159230821570196}
+  heightKnob: {fileID: 2375798200757418112}
+  heightKnobTransform: {fileID: 2375798200757418126}
+  heightKnobHinge: {fileID: 2375798200757418113}
   travelDistance: 0.3
 --- !u!54 &2375798201259235147
 Rigidbody:
@@ -5214,7 +5238,9 @@ GameObject:
   - component: {fileID: 2375798201594756843}
   - component: {fileID: 2375798201594756846}
   - component: {fileID: 2375798201594756845}
-  - component: {fileID: 2375798201594756844}
+  - component: {fileID: 8206364993351320908}
+  - component: {fileID: 1922499017730006605}
+  - component: {fileID: 7810456975400845391}
   m_Layer: 0
   m_Name: DrillbitHolder
   m_TagString: Untagged
@@ -5283,20 +5309,49 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &2375798201594756844
-CapsuleCollider:
+--- !u!65 &8206364993351320908
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2375798201594756842}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 1.9999999, z: 0.8}
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &1922499017730006605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2375798201594756842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784f01fbc91c2bd4aac6fd5408ac7a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topAssemblyRigidbody: {fileID: 2375798201259235147}
+  topAssembly: {fileID: 2375798201259235146}
+--- !u!114 &7810456975400845391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2375798201594756842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c71d0fbf2547ec49aa41b4c61f24014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootCollider: {fileID: 8206364993351320908}
+  collidersToIgnore:
+  - {fileID: 2375798201348620899}
+  - {fileID: 5291862853993813715}
 --- !u!1 &2375798201613726011
 GameObject:
   m_ObjectHideFlags: 0
@@ -5990,6 +6045,7 @@ MonoBehaviour:
   activationThreshold: {fileID: 5291862853993813715}
   snapRigidbody: {fileID: 8664865475042134488}
   fixedJoint: {fileID: 7050575353762865935}
+  useTypeFilter: 0
   engageEvents:
     m_PersistentCalls:
       m_Calls: []

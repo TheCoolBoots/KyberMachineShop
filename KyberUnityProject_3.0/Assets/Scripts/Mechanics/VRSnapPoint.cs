@@ -15,7 +15,8 @@ public class VRSnapPoint : MonoBehaviour
     [SerializeField] private Collider activationThreshold;
     [SerializeField] private Rigidbody snapRigidbody;
     [SerializeField] private FixedJoint fixedJoint;
-
+    [SerializeField] private bool useTypeFilter;
+    [SerializeField] private List<Type> allowedTypes;
 
     [Space]
     [SerializeField] private UnityEvent engageEvents;

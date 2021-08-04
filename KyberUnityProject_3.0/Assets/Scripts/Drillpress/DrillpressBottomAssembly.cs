@@ -11,20 +11,24 @@ public class DrillpressBottomAssembly : MonoBehaviour
     private float startYPos;
     private float outputVal;
 
-    void Start()
+    private void Start()
     {
-        startYPos = transform.localPosition.y;
+        startYPos = transform.position.y;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        outputVal = map(heightChanger.actualAngle, 0, 360, 1, 0);
-        transform.localPosition = new Vector3(transform.localPosition.x, startYPos - outputVal * travelDistance, transform.localPosition.z);
+        outputVal = Map(heightChanger.actualAngle, 0, 360, 0, -1);
+        transform.position = new Vector3(transform.position.x, startYPos - outputVal * travelDistance, transform.position.z);
     }
 
-    private float map(float val, float a1, float b1, float a2, float b2)
+    private float Map(float val, float a1, float b1, float a2, float b2)
     {
         return (b2 - a2) * ((val - a1) / (b1 - a1)) + a2;
+    }
+
+    public void SetupIfWoodblock()
+    {
+
     }
 }
