@@ -6045,7 +6045,9 @@ MonoBehaviour:
   activationThreshold: {fileID: 5291862853993813715}
   snapRigidbody: {fileID: 8664865475042134488}
   fixedJoint: {fileID: 7050575353762865935}
-  useTypeFilter: 0
+  useTagFilter: 1
+  allowedTags:
+  - DrillpressSnap
   engageEvents:
     m_PersistentCalls:
       m_Calls: []

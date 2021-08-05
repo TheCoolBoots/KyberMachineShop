@@ -15,8 +15,8 @@ public class VRSnapPoint : MonoBehaviour
     [SerializeField] private Collider activationThreshold;
     [SerializeField] private Rigidbody snapRigidbody;
     [SerializeField] private FixedJoint fixedJoint;
-    [SerializeField] private bool useTypeFilter;
-    [SerializeField] private List<Type> allowedTypes;
+    [SerializeField] private bool useTagFilter;
+    [SerializeField] private List<string> allowedTags;
 
     [Space]
     [SerializeField] private UnityEvent engageEvents;
@@ -53,6 +53,20 @@ public class VRSnapPoint : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (useTagFilter && GameObjectIsOfAllowedType(other.gameObject))
+        {
+            TriggerStayLogic(other);
+        }
+        else if (!useTagFilter)
+        {
+            TriggerStayLogic(other);
+        }
+
+
+    }
+
+    private void TriggerStayLogic(Collider other)
+    {
         // if snap point is empty, and component colliding with snap point has a Interactable && Throwable component
         if (!snapPointOccipied && other.GetComponent<Interactable>() != null)
         {
@@ -75,7 +89,6 @@ public class VRSnapPoint : MonoBehaviour
         {
             DisengageItem(currentSnappedItem);
         }
-
     }
 
 
@@ -106,6 +119,16 @@ public class VRSnapPoint : MonoBehaviour
         {
             DisengageItem(currentSnappedItem);
         }
+    }
+
+    private bool GameObjectIsOfAllowedType(GameObject gameObject)
+    {
+        foreach(string s in allowedTags)
+        {
+            if (gameObject.tag == s)
+                return true;
+        }
+        return false;
     }
 
 }
