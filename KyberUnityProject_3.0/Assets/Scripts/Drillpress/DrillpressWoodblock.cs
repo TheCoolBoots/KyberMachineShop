@@ -6,17 +6,9 @@ public class DrillpressWoodblock : MonoBehaviour
 {
     [SerializeField] private GameObject topCap;
     [SerializeField] private GameObject botCap;
+    [SerializeField] private Collider drillbitCollider;
 
-    private float topCapZStart;
-    private float botCapZStart;
     private bool drilledThrough = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        topCapZStart = topCap.transform.localPosition.z;
-        botCapZStart = botCap.transform.localPosition.z;
-    }
 
     // Update is called once per frame
     void Update()
@@ -27,5 +19,17 @@ public class DrillpressWoodblock : MonoBehaviour
             botCap.SetActive(false);
             drilledThrough = true;
         }
+    }
+
+    public void SetupForDrillpress()
+    {
+        topCap.GetComponent<Rigidbody>().isKinematic = false;
+        botCap.GetComponent<Rigidbody>().isKinematic = false;
+    }
+
+    public void ResetWoodblock()
+    {
+        topCap.GetComponent<Rigidbody>().isKinematic = true;
+        botCap.GetComponent<Rigidbody>().isKinematic = true;
     }
 }

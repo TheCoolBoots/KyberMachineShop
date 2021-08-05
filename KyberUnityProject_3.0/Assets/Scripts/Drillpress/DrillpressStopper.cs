@@ -10,14 +10,6 @@ public class DrillpressStopper : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Should Stop Now");
         topAssembly.OnDenyDownMovement();
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("Back on");
-        //topAssembly.OnEnableDownMovement();
-    }
-
 }
