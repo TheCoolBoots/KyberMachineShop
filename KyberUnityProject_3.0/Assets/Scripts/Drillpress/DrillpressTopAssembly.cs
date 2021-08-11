@@ -31,7 +31,7 @@ public class DrillpressTopAssembly : MonoBehaviour
     {
         if (!denyMovement)
             transform.position = new Vector3(transform.position.x, startYPos - heightKnob.outputVal * travelDistance, transform.position.z);
-        else if (lastKnobOutputVal > heightKnob.outputVal+.001)
+        else if (lastKnobOutputVal > heightKnob.outputVal + .001)
             OnEnableDownMovement();
 
         lastKnobOutputVal = heightKnob.outputVal;

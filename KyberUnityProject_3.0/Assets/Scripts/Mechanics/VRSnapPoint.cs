@@ -98,7 +98,6 @@ public class VRSnapPoint : MonoBehaviour
         other.gameObject.transform.position = snapPoint.position;
         other.gameObject.transform.rotation = snapPoint.rotation;
         fixedJoint.connectedBody = other.gameObject.GetComponent<Rigidbody>();
-        // other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         snapPointOccipied = true;
         currentSnappedItem = other.gameObject;
         colliderBoundsIndicator.enabled = false;
@@ -108,7 +107,6 @@ public class VRSnapPoint : MonoBehaviour
     private void DisengageItem(GameObject canister)
     {
         fixedJoint.connectedBody = null;
-        // canister.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         snapPointOccipied = false;
         disengageEvents.Invoke();
     }

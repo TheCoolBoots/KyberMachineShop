@@ -6,6 +6,8 @@ public class DrillpressWoodblock : MonoBehaviour
 {
     [SerializeField] private GameObject topCap;
     [SerializeField] private GameObject botCap;
+    [SerializeField] private ParticleSystem topSystem;
+    [SerializeField] private ParticleSystem botSystem;
     [SerializeField] private Collider drillbitCollider;
 
     private bool drilledThrough = false;
@@ -18,6 +20,8 @@ public class DrillpressWoodblock : MonoBehaviour
             topCap.SetActive(false);
             botCap.SetActive(false);
             drilledThrough = true;
+            topSystem.Stop();
+            botSystem.Stop();
         }
     }
 
@@ -25,11 +29,13 @@ public class DrillpressWoodblock : MonoBehaviour
     {
         topCap.GetComponent<Rigidbody>().isKinematic = false;
         botCap.GetComponent<Rigidbody>().isKinematic = false;
+        Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), drillbitCollider, true);
     }
 
     public void ResetWoodblock()
     {
         topCap.GetComponent<Rigidbody>().isKinematic = true;
         botCap.GetComponent<Rigidbody>().isKinematic = true;
+        Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), drillbitCollider, false);
     }
 }

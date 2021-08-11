@@ -29,11 +29,15 @@ public class DrillpressBottomAssembly : MonoBehaviour
 
     public void SetupIfWoodblock()
     {
-        woodblockSnapPoint.currentSnappedItem.GetComponent<DrillpressWoodblock>().SetupForDrillpress();
+        DrillpressWoodblock woodblock;
+        if((woodblock = woodblockSnapPoint.currentSnappedItem.GetComponent<DrillpressWoodblock>()) != null)
+            woodblock.SetupForDrillpress();
     }
 
     public void ResetWoodblock()
     {
-        woodblockSnapPoint.currentSnappedItem.GetComponent<DrillpressWoodblock>().ResetWoodblock();
+        DrillpressWoodblock woodblock;
+        if ((woodblock = woodblockSnapPoint.currentSnappedItem.GetComponent<DrillpressWoodblock>()) != null)
+            woodblock.ResetWoodblock();
     }
 }
