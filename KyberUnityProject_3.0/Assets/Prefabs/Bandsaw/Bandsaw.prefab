@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 4381350948044057476}
   - component: {fileID: 3721170984746788190}
   - component: {fileID: 6284039403174020451}
+  - component: {fileID: 2114148406693350470}
   m_Layer: 0
   m_Name: Sawblade
   m_TagString: Untagged
@@ -186,6 +187,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2114148406693350470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382316197072269364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ac7eca04dab2d459c74699e1e44acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bandsawOn: 0
 --- !u!1 &2230171066078232805
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37004d615ee39374693598c3b027ffd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapPoint: {fileID: 0}
+  snapPoint: {fileID: 8176783955411081130}
 --- !u!1 &3059049096496112321
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +688,7 @@ GameObject:
   - component: {fileID: 7159699230651798645}
   - component: {fileID: 8176783955411081130}
   m_Layer: 0
-  m_Name: SnapPointParent
+  m_Name: SnapPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -688,8 +702,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4633966628273089270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2295, y: 1.4473802, z: -0.2276}
-  m_LocalScale: {x: 0.23446853, y: 0.23446853, z: 0.23446853}
+  m_LocalPosition: {x: -0.2304, y: 1.44738, z: -0.233}
+  m_LocalScale: {x: 0.23446856, y: 0.23446856, z: 0.23446856}
   m_Children: []
   m_Father: {fileID: 6049810602291854076}
   m_RootOrder: 3
@@ -781,7 +795,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.258, y: 1.5349, z: -0.23100002}
+  m_ConnectedAnchor: {x: -0.23413219, y: 1.4452705, z: -0.233}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
