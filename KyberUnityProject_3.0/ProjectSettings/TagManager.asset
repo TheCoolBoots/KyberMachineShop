@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DrillpressSnap
   - DrillpressDrillbit
+  - BandsawWoodblock
   layers:
   - Default
   - TransparentFX

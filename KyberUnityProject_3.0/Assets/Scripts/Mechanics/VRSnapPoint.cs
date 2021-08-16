@@ -13,7 +13,6 @@ public class VRSnapPoint : MonoBehaviour
     [SerializeField] private Transform snapPoint;
     [SerializeField] private MeshRenderer colliderBoundsIndicator;
     [SerializeField] private Collider activationThreshold;
-    [SerializeField] private Rigidbody snapRigidbody;
     [SerializeField] private FixedJoint fixedJoint;
     [SerializeField] private bool useTagFilter;
     [SerializeField] private List<string> allowedTags;
@@ -38,8 +37,6 @@ public class VRSnapPoint : MonoBehaviour
             activationThreshold = GetComponent<Collider>();
         if (fixedJoint == null)
             fixedJoint = GetComponent<FixedJoint>();
-        if (snapRigidbody == null)
-            snapRigidbody = GetComponent<Rigidbody>();
         activationThreshold.isTrigger = true;
         colliderBoundsIndicator.enabled = false;
 
@@ -101,6 +98,7 @@ public class VRSnapPoint : MonoBehaviour
         snapPointOccipied = true;
         currentSnappedItem = other.gameObject;
         colliderBoundsIndicator.enabled = false;
+        other.gameObject.transform.SetParent(transform, true);
         engageEvents.Invoke();
     }
 

@@ -10,7 +10,7 @@ public class WoodblockCaps : MonoBehaviour
     private bool particleSystemActive = false;
 
 
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag(drillbitTag))
         {
@@ -29,6 +29,5 @@ public class WoodblockCaps : MonoBehaviour
             particleSystemActive = false;
             drillParticleSystem.SetActive(false);
         }
-            
     }
 }
