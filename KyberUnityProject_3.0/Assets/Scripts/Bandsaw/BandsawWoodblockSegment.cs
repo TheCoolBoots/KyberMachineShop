@@ -40,9 +40,9 @@ public class BandsawWoodblockSegment : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(Mathf.Abs(transform.position.x - startXPos) >= linearLimit)
+        if(Mathf.Abs(transform.position.x - startXPos) >= 2 * linearLimit)
         {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 
@@ -57,9 +57,16 @@ public class BandsawWoodblockSegment : MonoBehaviour
         {
             rightBlock.transform.SetParent(null, true);
             rightBlock.GetComponent<Interactable>().enabled = true;
+            rightBlock.GetComponent<Collider>().enabled = true;
+            rightBlock.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
             leftBlock.transform.SetParent(null, true);
             leftBlock.GetComponent<Interactable>().enabled = true;
+            leftBlock.GetComponent<Collider>().enabled = true;
+            leftBlock.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
             parentContainer.GetComponent<Interactable>().enabled = false;
+            parentContainer.GetComponent<Collider>().enabled = false;
             gameObject.SetActive(false);
         }
     }

@@ -1258,10 +1258,90 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 213300967576030674, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 213300967576030674, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394538310702193514, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394538310702193514, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1560158654987334141, guid: 411c41bbc30514644abba41481129de5,
         type: 3}
       propertyPath: m_Name
       value: BandsawWoodblock
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993396283395165158, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: handFollowTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628551099720368893, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000318816168624233, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404683216163188848, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404683216163188848, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595557387464901572, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005399215551066584, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248595847939288076, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248595847939288076, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7332510073338970710, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280383554363275723, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280383554363275723, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8426344754320681294, guid: 411c41bbc30514644abba41481129de5,
         type: 3}
@@ -1316,6 +1396,26 @@ PrefabInstance:
     - target: {fileID: 8426344754320681294, guid: 411c41bbc30514644abba41481129de5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767043148082649278, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767043148082649278, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867001300787506428, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867001300787506428, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3147,8 +3247,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3280870804951819103, guid: 69b3806610515814580ea5c2f01504a4,
         type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.23039998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280870804951819103, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.44738
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280870804951819103, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.22760013
+      value: -0.23300007
       objectReference: {fileID: 0}
     - target: {fileID: 4836290161902789745, guid: 69b3806610515814580ea5c2f01504a4,
         type: 3}
