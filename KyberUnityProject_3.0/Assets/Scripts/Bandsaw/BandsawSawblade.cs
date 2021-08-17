@@ -4,5 +4,15 @@ using UnityEngine;
 
 public class BandsawSawblade : MonoBehaviour
 {
-    public bool bandsawOn;
+    public bool bandsawOn = false;
+
+    public void TurnBandsawOn()
+    {
+        bandsawOn = true;
+    }
+     
+    public void TurnBandsawOff()
+    {
+        bandsawOn = false;
+    }
 }

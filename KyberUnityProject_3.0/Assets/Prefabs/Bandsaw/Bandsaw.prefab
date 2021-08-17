@@ -106,9 +106,10 @@ GameObject:
   - component: {fileID: 3721170984746788190}
   - component: {fileID: 6284039403174020451}
   - component: {fileID: 2114148406693350470}
+  - component: {fileID: 3349333285938358942}
   m_Layer: 0
   m_Name: Sawblade
-  m_TagString: Untagged
+  m_TagString: BandsawSawblade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +123,7 @@ Transform:
   m_GameObject: {fileID: 1382316197072269364}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.89156896, z: 0}
-  m_LocalScale: {x: 0.035921138, y: 0.92027634, z: 0.29917252}
+  m_LocalScale: {x: 0.4735843, y: 0.92027634, z: 0.29917252}
   m_Children: []
   m_Father: {fileID: 7857052263799085683}
   m_RootOrder: 1
@@ -199,7 +200,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95ac7eca04dab2d459c74699e1e44acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bandsawOn: 0
+  bandsawOn: 1
+--- !u!54 &3349333285938358942
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382316197072269364}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &2230171066078232805
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +812,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.23413219, y: 1.4452705, z: -0.233}
+  m_ConnectedAnchor: {x: -0.23039998, y: 1.44738, z: -0.23300007}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -838,7 +855,7 @@ ConfigurableJoint:
   m_XDrive:
     serializedVersion: 3
     positionSpring: 0
-    positionDamper: 60
+    positionDamper: 10
     maximumForce: 3.4028233e+38
   m_YDrive:
     serializedVersion: 3
@@ -1143,7 +1160,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.50000006, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 1.9646142, z: -0.233}
+  m_ConnectedAnchor: {x: 0.00000011188254, y: 1.9646142, z: -0.23300007}
   serializedVersion: 2
   m_SecondaryAxis: {x: 1, y: 1, z: 0}
   m_XMotion: 0
@@ -1767,17 +1784,17 @@ PrefabInstance:
     - target: {fileID: 6671864055012097001, guid: 7e5aa698c0a2e2d4bbb22f2e535b6283,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.04225008
+      value: 4.2484016
       objectReference: {fileID: 0}
     - target: {fileID: 6671864055012097001, guid: 7e5aa698c0a2e2d4bbb22f2e535b6283,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.3227038
+      value: 1.1477039
       objectReference: {fileID: 0}
     - target: {fileID: 6671864055012097001, guid: 7e5aa698c0a2e2d4bbb22f2e535b6283,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.18584643
+      value: 1.6002591
       objectReference: {fileID: 0}
     - target: {fileID: 6671864055490649189, guid: 7e5aa698c0a2e2d4bbb22f2e535b6283,
         type: 3}
@@ -1898,17 +1915,17 @@ PrefabInstance:
     - target: {fileID: 7255747613173148612, guid: 7c3ac33f738cc4d4d8f14255d3d2c6c5,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.15483482
+      value: 3.9186397
       objectReference: {fileID: 0}
     - target: {fileID: 7255747613173148612, guid: 7c3ac33f738cc4d4d8f14255d3d2c6c5,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.8910563
+      value: 1.7160563
       objectReference: {fileID: 0}
     - target: {fileID: 7255747613173148612, guid: 7c3ac33f738cc4d4d8f14255d3d2c6c5,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.14470139
+      value: 1.7151259
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3ac33f738cc4d4d8f14255d3d2c6c5, type: 3}
@@ -1928,17 +1945,17 @@ PrefabInstance:
     - target: {fileID: 3619591719299540587, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.100650266
+      value: 3.928505
       objectReference: {fileID: 0}
     - target: {fileID: 3619591719299540587, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.359211
+      value: 1.184211
       objectReference: {fileID: 0}
     - target: {fileID: 3619591719299540587, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.1745346
+      value: 1.7761887
       objectReference: {fileID: 0}
     - target: {fileID: 6724286977715195525, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
@@ -2009,6 +2026,71 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2114148406693350470}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2114148406693350470}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: TurnBandsawOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: TurnBandsawOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9131122944992391555, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
