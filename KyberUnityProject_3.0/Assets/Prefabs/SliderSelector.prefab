@@ -615,7 +615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Float Slider
+  m_text: 'Slider Selector
 
 '
   m_isRightToLeft: 0
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.55
+  m_fontSize: 0.45
   m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
