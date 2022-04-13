@@ -6,13 +6,9 @@ public class BandsawSawblade : MonoBehaviour
 {
     public bool bandsawOn = false;
 
-    public void TurnBandsawOn()
+    public void SetBandsawOn(bool val)
     {
-        bandsawOn = true;
+        bandsawOn = val;
     }
      
-    public void TurnBandsawOff()
-    {
-        bandsawOn = false;
-    }
 }

@@ -1276,20 +1276,80 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 213300967576030674, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 213300967576030674, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1394538310702193514, guid: 411c41bbc30514644abba41481129de5,
         type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1560158654987334141, guid: 411c41bbc30514644abba41481129de5,
         type: 3}
       propertyPath: m_Name
       value: BandsawWoodblock
       objectReference: {fileID: 0}
+    - target: {fileID: 1604448815051280698, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_XDrive.positionDamper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465711336755251916, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_XDrive.positionDamper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404683216163188848, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404683216163188848, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278271227154799993, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_XDrive.positionDamper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527914663412145306, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_XDrive.positionDamper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5896685872063969240, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: lastSegment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005919117805154445, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_XDrive.positionDamper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248595847939288076, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248595847939288076, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8280383554363275723, guid: 411c41bbc30514644abba41481129de5,
         type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8426344754320681294, guid: 411c41bbc30514644abba41481129de5,
         type: 3}
@@ -1344,6 +1404,26 @@ PrefabInstance:
     - target: {fileID: 8426344754320681294, guid: 411c41bbc30514644abba41481129de5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767043148082649278, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767043148082649278, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867001300787506428, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867001300787506428, guid: 411c41bbc30514644abba41481129de5,
+        type: 3}
+      propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2379,6 +2459,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2114148406693350470, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: bandsawOn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2230171066078232805, guid: 69b3806610515814580ea5c2f01504a4,
         type: 3}
       propertyPath: m_Layer
@@ -2402,6 +2487,36 @@ PrefabInstance:
     - target: {fileID: 3280870804951819103, guid: 69b3806610515814580ea5c2f01504a4,
         type: 3}
       propertyPath: m_XDrive.positionDamper
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437053070382896655, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437053070382896655, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437053070382896655, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetBandsawOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437053070382896655, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetBandsawOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437053070382896655, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437053070382896655, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4836290161902789745, guid: 69b3806610515814580ea5c2f01504a4,
@@ -2483,6 +2598,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.23300007
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284039403174020451, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.4460016
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284039403174020451, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.00000065510596
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284039403174020451, guid: 69b3806610515814580ea5c2f01504a4,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.79339296
       objectReference: {fileID: 0}
     - target: {fileID: 6483569792542478076, guid: 69b3806610515814580ea5c2f01504a4,
         type: 3}

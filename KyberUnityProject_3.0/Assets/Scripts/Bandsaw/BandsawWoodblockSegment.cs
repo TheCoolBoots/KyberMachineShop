@@ -67,10 +67,11 @@ public class BandsawWoodblockSegment : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(Mathf.Abs(transform.localPosition.x - startXPos) >= transform.localScale.x)
+        if(Mathf.Abs(transform.localPosition.x - startXPos) >= transform.localScale.x * .9f)
         {
             Debug.Log($"transform.position.x: {transform.position.x}, startXPos: {startXPos}, linearLimit: {linearLimit}");
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
@@ -89,12 +90,10 @@ public class BandsawWoodblockSegment : MonoBehaviour
                 joint.angularXMotion = ConfigurableJointMotion.Locked;
                 joint.angularYMotion = ConfigurableJointMotion.Locked;
                 joint.angularZMotion = ConfigurableJointMotion.Locked;
-                Debug.Log("Segment set to non-kinematic and joint is limiting X movement");
+                //Debug.Log("Segment set to non-kinematic and joint is limiting X movement");
 
                 if (lastSegment)
                 {
-
-
                     rightBlock.transform.SetParent(null, true);
                     rightBlock.GetComponent<Interactable>().enabled = true;
                     rightBlock.GetComponent<Collider>().enabled = true;
@@ -110,14 +109,15 @@ public class BandsawWoodblockSegment : MonoBehaviour
 
                     parentContainer.GetComponent<Interactable>().enabled = false;
                     parentContainer.GetComponent<Collider>().enabled = false;
-                    Debug.Log("Releasing sub-woodblocks");
-                    Destroy(gameObject);
+                    //Debug.Log("Releasing sub-woodblocks");
+                    //Destroy(gameObject);
+                    gameObject.SetActive(false);
                 }
             }
             else
             {
                 Physics.IgnoreCollision(other, parentContainer.GetComponent<Collider>(), false);
-                Debug.Log("allowing collisions with parent");
+                //Debug.Log("allowing collisions with parent");
             }
         }
     }
