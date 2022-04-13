@@ -9,13 +9,15 @@ public class DrillpressWoodblock : MonoBehaviour
     [SerializeField] private ParticleSystem topSystem;
     [SerializeField] private ParticleSystem botSystem;
     [SerializeField] private Collider drillbitCollider;
+    [SerializeField] private float collisionThreshold = .1f;
+
 
     private bool drilledThrough = false;
 
     // Update is called once per frame
     void Update()
     {
-        if(!drilledThrough && topCap.transform.localPosition.z <= botCap.transform.localPosition.z)
+        if(!drilledThrough && (topCap.transform.localPosition.z - botCap.transform.localPosition.z < collisionThreshold))
         {
             topCap.SetActive(false);
             botCap.SetActive(false);

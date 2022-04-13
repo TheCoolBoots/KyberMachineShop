@@ -9,6 +9,19 @@ public class WoodblockCaps : MonoBehaviour
 
     private bool particleSystemActive = false;
 
+    private float localXPos;
+    private float localYPos;
+
+    private void Start()
+    {
+        localXPos = transform.localPosition.x;
+        localYPos = transform.localPosition.y;
+    }
+
+    private void Update()
+    {
+        transform.localPosition = new Vector3(localXPos, localYPos, transform.localPosition.z);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

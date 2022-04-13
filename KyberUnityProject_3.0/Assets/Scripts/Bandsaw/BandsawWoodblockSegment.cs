@@ -98,12 +98,15 @@ public class BandsawWoodblockSegment : MonoBehaviour
                     rightBlock.transform.SetParent(null, true);
                     rightBlock.GetComponent<Interactable>().enabled = true;
                     rightBlock.GetComponent<Collider>().enabled = true;
-                    rightBlock.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                    rightBlock.GetComponent<Rigidbody>().useGravity = true;
+                    rightBlock.GetComponent<Rigidbody>().isKinematic = false;
+
 
                     leftBlock.transform.SetParent(null, true);
                     leftBlock.GetComponent<Interactable>().enabled = true;
                     leftBlock.GetComponent<Collider>().enabled = true;
-                    leftBlock.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                    leftBlock.GetComponent<Rigidbody>().useGravity = true;
+                    leftBlock.GetComponent<Rigidbody>().isKinematic = false;
 
                     parentContainer.GetComponent<Interactable>().enabled = false;
                     parentContainer.GetComponent<Collider>().enabled = false;
