@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 6284039403174020451}
   - component: {fileID: 2114148406693350470}
   - component: {fileID: 3349333285938358942}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sawblade
   m_TagString: BandsawSawblade
   m_Icon: {fileID: 0}
@@ -186,8 +186,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.4460016}
+  m_Center: {x: -0.00000065510596, y: 0, z: 0.79339296}
 --- !u!114 &2114148406693350470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95ac7eca04dab2d459c74699e1e44acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bandsawOn: 1
+  bandsawOn: 0
 --- !u!54 &3349333285938358942
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 4330110629369343587}
   - component: {fileID: 160944382071873901}
   - component: {fileID: 1211139796546412982}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BaseplateSupport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,7 +719,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4633966628273089270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2304, y: 1.44738, z: -0.233}
+  m_LocalPosition: {x: -0.2304, y: 1.454, z: -0.233}
   m_LocalScale: {x: 0.23446856, y: 0.23446856, z: 0.23446856}
   m_Children: []
   m_Father: {fileID: 6049810602291854076}
@@ -812,7 +812,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.23039998, y: 1.44738, z: -0.233}
+  m_ConnectedAnchor: {x: -0.23039998, y: 1.4540001, z: -0.23300007}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -855,7 +855,7 @@ ConfigurableJoint:
   m_XDrive:
     serializedVersion: 3
     positionSpring: 0
-    positionDamper: 10
+    positionDamper: 100
     maximumForce: 3.4028233e+38
   m_YDrive:
     serializedVersion: 3
@@ -927,7 +927,8 @@ MonoBehaviour:
   activationThreshold: {fileID: 7427966779863458753}
   fixedJoint: {fileID: 7159699230651798645}
   useTagFilter: 0
-  allowedTags: []
+  allowedTags:
+  - BandsawWoodblock
   engageEvents:
     m_PersistentCalls:
       m_Calls:
@@ -1160,7 +1161,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.50000006, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 1.9646142, z: -0.233}
+  m_ConnectedAnchor: {x: 0.00000011188254, y: 1.9646142, z: -0.23300007}
   serializedVersion: 2
   m_SecondaryAxis: {x: 1, y: 1, z: 0}
   m_XMotion: 0
@@ -1510,7 +1511,7 @@ GameObject:
   - component: {fileID: 4140450350834167274}
   - component: {fileID: 6507075669444657550}
   - component: {fileID: 8942250869521137757}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Baseplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1585,7 +1586,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8206286361427184736}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8754ea8d156876d4593bfd96da799796, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1784,17 +1785,17 @@ PrefabInstance:
     - target: {fileID: 6671864055012097001, guid: 7e5aa698c0a2e2d4bbb22f2e535b6283,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.04225008
+      value: 4.2484016
       objectReference: {fileID: 0}
     - target: {fileID: 6671864055012097001, guid: 7e5aa698c0a2e2d4bbb22f2e535b6283,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.3227038
+      value: 1.1477039
       objectReference: {fileID: 0}
     - target: {fileID: 6671864055012097001, guid: 7e5aa698c0a2e2d4bbb22f2e535b6283,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.18584643
+      value: 1.6002591
       objectReference: {fileID: 0}
     - target: {fileID: 6671864055490649189, guid: 7e5aa698c0a2e2d4bbb22f2e535b6283,
         type: 3}
@@ -1915,17 +1916,17 @@ PrefabInstance:
     - target: {fileID: 7255747613173148612, guid: 7c3ac33f738cc4d4d8f14255d3d2c6c5,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.15483482
+      value: 3.9186397
       objectReference: {fileID: 0}
     - target: {fileID: 7255747613173148612, guid: 7c3ac33f738cc4d4d8f14255d3d2c6c5,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.8910563
+      value: 1.7160563
       objectReference: {fileID: 0}
     - target: {fileID: 7255747613173148612, guid: 7c3ac33f738cc4d4d8f14255d3d2c6c5,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.14470139
+      value: 1.7151259
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c3ac33f738cc4d4d8f14255d3d2c6c5, type: 3}
@@ -1945,17 +1946,17 @@ PrefabInstance:
     - target: {fileID: 3619591719299540587, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.100650266
+      value: 3.928505
       objectReference: {fileID: 0}
     - target: {fileID: 3619591719299540587, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.359211
+      value: 1.184211
       objectReference: {fileID: 0}
     - target: {fileID: 3619591719299540587, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.1745346
+      value: 1.7761887
       objectReference: {fileID: 0}
     - target: {fileID: 6724286977715195525, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
@@ -2040,12 +2041,12 @@ PrefabInstance:
     - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
@@ -2070,17 +2071,22 @@ PrefabInstance:
     - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: TurnBandsawOn
+      value: SetBandsawOn
       objectReference: {fileID: 0}
     - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: TurnBandsawOff
+      value: SetBandsawOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
+        type: 3}
+      propertyPath: switchOnEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}
       propertyPath: switchOffEvents.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7249415808703058320, guid: 2f4e4d7d5756ec84fb8f56bd459d719c,
         type: 3}

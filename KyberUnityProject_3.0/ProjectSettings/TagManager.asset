@@ -8,6 +8,8 @@ TagManager:
   - DrillpressDrillbit
   - BandsawWoodblock
   - BandsawSawblade
+  - BandsawClamp
+  - DrillpressClamp
   layers:
   - Default
   - TransparentFX

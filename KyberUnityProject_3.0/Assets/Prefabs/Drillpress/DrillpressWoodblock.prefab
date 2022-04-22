@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3267698607060990269}
   - component: {fileID: 4554854366240199000}
   - component: {fileID: 1054517969054200681}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BotCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 2122034300392368300}
   - component: {fileID: 2122034300392368301}
   - component: {fileID: 408250512279318561}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TopCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5028,7 +5028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7498292815461120649
 Transform:
   m_ObjectHideFlags: 0
@@ -5265,6 +5265,7 @@ MonoBehaviour:
   topSystem: {fileID: 4105640134457863753}
   botSystem: {fileID: 4874694073484612039}
   drillbitCollider: {fileID: 0}
+  collisionThreshold: 0.1
 --- !u!114 &8733411409894828223
 MonoBehaviour:
   m_ObjectHideFlags: 0

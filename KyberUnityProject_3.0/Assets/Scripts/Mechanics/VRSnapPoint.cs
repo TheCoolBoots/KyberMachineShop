@@ -127,5 +127,18 @@ public class VRSnapPoint : MonoBehaviour
         return false;
     }
 
+    public void SetSnapPointLock(bool locked)
+    {
+        if(snapPointOccipied && currentSnappedItem.GetComponent<Interactable>() != null)
+        {
+            // if want to lock, disable interactable
+            currentSnappedItem.GetComponent<Interactable>().enabled = !locked;
+        }
+    }
+
 }
+
+// can pick up block while being drilled
+// difficult to pull tri-wheel
+// something wrong with limit of drill press?
 
