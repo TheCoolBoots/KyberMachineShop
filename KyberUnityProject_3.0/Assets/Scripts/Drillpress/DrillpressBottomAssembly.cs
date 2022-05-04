@@ -6,8 +6,12 @@ public class DrillpressBottomAssembly : MonoBehaviour
 {
     [SerializeField] private ContinuousFloatKnob heightChanger;
     [SerializeField] [Tooltip("the worldspace distance travelled by one rotation of the height changer knob")] private float travelDistance;
-    [SerializeField] private VRSnapPoint woodblockSnapPoint;
+    [SerializeField] private GameObject woodblockSnapPointGO;
+    [SerializeField] private GameObject clampSnapPointGO;
+    [SerializeField] private GameObject useTheClampText;
 
+    private VRSnapPoint woodblockSnapPoint;
+    private VRSnapPoint clampSnapPoint;
     private float startYPos;
     private float outputVal;
 
@@ -18,8 +22,20 @@ public class DrillpressBottomAssembly : MonoBehaviour
 
     private void Update()
     {
+        woodblockSnapPoint = woodblockSnapPointGO.GetComponent<VRSnapPoint>();
+        clampSnapPoint = clampSnapPointGO.GetComponent<VRSnapPoint>();
+
         outputVal = Map(heightChanger.actualAngle, 0, 360, 0, -1);
         transform.position = new Vector3(transform.position.x, startYPos - outputVal * travelDistance, transform.position.z);
+
+        if (woodblockSnapPoint.snapPointOccipied && !clampSnapPoint.snapPointOccipied)
+        {
+            useTheClampText.SetActive(true);
+        }
+        else
+        {
+            useTheClampText.SetActive(false);
+        }
     }
 
     private float Map(float val, float a1, float b1, float a2, float b2)

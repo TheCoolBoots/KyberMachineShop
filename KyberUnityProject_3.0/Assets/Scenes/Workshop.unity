@@ -542,6 +542,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3214117402133893489, guid: d544b2a0657331147b33e5a597bae35f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214117402778051903, guid: d544b2a0657331147b33e5a597bae35f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d544b2a0657331147b33e5a597bae35f, type: 3}
 --- !u!136 &860680003 stripped
