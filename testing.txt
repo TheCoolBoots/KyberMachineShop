@@ -1,0 +1,40 @@
+ALBERT
+which woodblocks to use?
+triwheel knobs come off the knob
+when bandsaw is on, can grab and shove block through
+can't cut into smaller pieces
+what is the pusher?
+tensioner doesn't do anything
+stuff in the room isn't interactable
+drillpress doesn't go all the way through
+didnt look at tooltips
+
+DANIEL
+tried to send it through the other way on bandsaw
+didn't use guide and fence
+didn't know how to point
+tried to clamp not while using machine
+
+FIONA
+doesn't know what clamp is
+uses deill press w/o clamp
+doesn't know which clamp to use
+
+ERIKA
+read the instructions
+didn't know how to use teleport/movement controls
+didn't know which woodblocks to use
+needed explcit guidance to complete experience
+didn't read drillpress guide text
+
+ETHAN
+told about which block belongs to which machine and which machine does what
+no instruction necessary after that
+read the instructions
+"What's the bandsaw fence?"
+"what does flush mean?"
+used the bandsaw correctly after answering above questions
+used clamp for drillpress without guidance
+	tried to tighten clamp after placing it on drillpress
+"Am I just drilling a hole?"
+hole doesn't go all the way through when using the clamp

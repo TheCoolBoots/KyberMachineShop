@@ -109,9 +109,8 @@ public class BandsawWoodblockSegment : MonoBehaviour
 
                     parentContainer.GetComponent<Interactable>().enabled = false;
                     parentContainer.GetComponent<Collider>().enabled = false;
-                    //Debug.Log("Releasing sub-woodblocks");
-                    //Destroy(gameObject);
-                    gameObject.SetActive(false);
+                    Debug.Log("Releasing sub-woodblocks");
+                    Destroy(gameObject);
                 }
             }
             else
