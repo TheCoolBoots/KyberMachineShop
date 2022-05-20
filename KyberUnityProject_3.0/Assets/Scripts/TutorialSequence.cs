@@ -5,6 +5,7 @@ using UnityEngine;
 public class TutorialSequence : MonoBehaviour
 {
     public List<TutorialPart> tutorialParts;
+    public List<GameObject> tutorialTexts;
     [SerializeField] private int currentTutorialSegment = 0;
 
     // Start is called before the first frame update
@@ -18,15 +19,34 @@ public class TutorialSequence : MonoBehaviour
 
     public void NextSegment()
     {
-        tutorialParts[currentTutorialSegment].invokeEndEvents();
-        currentTutorialSegment += 1;
-        tutorialParts[currentTutorialSegment].invokeStartEvents();
+        if(currentTutorialSegment < tutorialParts.Count - 1)
+        {
+            DisableAllTexts();
+            tutorialParts[currentTutorialSegment].invokeEndEvents();
+            currentTutorialSegment += 1;
+            tutorialParts[currentTutorialSegment].invokeStartEvents();
+            tutorialTexts[currentTutorialSegment].SetActive(true);
+        }
+
     }
 
     public void PrevSegment()
     {
-        tutorialParts[currentTutorialSegment].invokeEndEvents();
-        currentTutorialSegment -= 1;
-        tutorialParts[currentTutorialSegment].invokeStartEvents();
+        if(currentTutorialSegment > 0)
+        {
+            DisableAllTexts();
+            tutorialParts[currentTutorialSegment].invokeEndEvents();
+            currentTutorialSegment -= 1;
+            tutorialParts[currentTutorialSegment].invokeStartEvents();
+            tutorialTexts[currentTutorialSegment].SetActive(true);
+        }
+    }
+
+    private void DisableAllTexts()
+    {
+        foreach(GameObject g in tutorialTexts)
+        {
+            g.SetActive(false);
+        }
     }
 }
