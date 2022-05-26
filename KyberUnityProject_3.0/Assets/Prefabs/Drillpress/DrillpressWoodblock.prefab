@@ -5015,13 +5015,13 @@ GameObject:
   - component: {fileID: 7498292815461120649}
   - component: {fileID: 223673604237413174}
   - component: {fileID: 3234277908897786296}
-  - component: {fileID: 2224171662353877697}
   - component: {fileID: 143557816189378492}
   - component: {fileID: 5646871119162785173}
   - component: {fileID: 4556367190086652085}
   - component: {fileID: 3753955196318243295}
   - component: {fileID: 9198233462409580128}
   - component: {fileID: 8733411409894828223}
+  - component: {fileID: 283031232}
   m_Layer: 0
   m_Name: DrillpressWoodblock
   m_TagString: DrillpressSnap
@@ -5038,7 +5038,7 @@ Transform:
   m_GameObject: {fileID: 6529055268138302026}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.11867858, y: 0.11867859, z: 0.11867858}
   m_Children:
   - {fileID: 652882502919676110}
   - {fileID: 2122034300392368289}
@@ -5094,20 +5094,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2224171662353877697
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6529055268138302026}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 249b299d69b574e47a6de0856b7484a2, type: 3}
 --- !u!114 &143557816189378492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5278,10 +5264,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c71d0fbf2547ec49aa41b4c61f24014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rootCollider: {fileID: 2224171662353877697}
+  rootCollider: {fileID: 283031232}
   collidersToIgnore:
   - {fileID: 3267698607060990269}
   - {fileID: 2122034300392368300}
+--- !u!65 &283031232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529055268138302026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9999999, y: 1.0000001, z: 0.99999994}
+  m_Center: {x: 0.0000009536743, y: 0.0000009536743, z: 0}
 --- !u!1 &6706111715094162696
 GameObject:
   m_ObjectHideFlags: 0

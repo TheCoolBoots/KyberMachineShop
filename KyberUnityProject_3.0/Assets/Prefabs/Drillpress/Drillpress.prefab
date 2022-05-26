@@ -1569,7 +1569,7 @@ Rigidbody:
   m_Drag: 100
   m_AngularDrag: 100
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
@@ -1584,7 +1584,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.17854023, y: 1.4439676, z: 0.12999913}
+  m_ConnectedAnchor: {x: 0.17854026, y: 1.4439676, z: 0.12999919}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1722,7 +1722,7 @@ Rigidbody:
   m_Drag: 100
   m_AngularDrag: 100
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
@@ -1737,13 +1737,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.21916501, y: 2.2903817, z: 0.043380857}
+  m_ConnectedAnchor: {x: 0.21916504, y: 2.2903817, z: 0.04338085}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 1
+  m_UseMotor: 0
   m_Motor:
     targetVelocity: 100
     force: 100
@@ -2013,7 +2013,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 15
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2028,7 +2028,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.001518601, y: 2.262807, z: -0.35316858}
+  m_ConnectedAnchor: {x: -0.0015186011, y: 2.262807, z: -0.35316876}
   m_UseSpring: 0
   m_Spring:
     spring: 0

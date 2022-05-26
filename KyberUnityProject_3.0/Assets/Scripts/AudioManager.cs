@@ -28,8 +28,9 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
+
         s.source.PlayDelayed(s.startDelay);
-        // Debug.Log("Playing: " + name);
+        Debug.Log("Playing: " + name);
     }
 
     public void Stop(string name)
