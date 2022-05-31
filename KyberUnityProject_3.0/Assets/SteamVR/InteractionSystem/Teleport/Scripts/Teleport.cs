@@ -188,6 +188,8 @@ namespace Valve.VR.InteractionSystem
 
 			CheckForSpawnPoint();
 
+			SteamVR_Fade.View(Color.clear, .5f);
+
 			// Invoke( "ShowTeleportHint", 5.0f );
 		}
 

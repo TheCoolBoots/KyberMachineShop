@@ -47,21 +47,35 @@ MonoBehaviour:
   - name: BandsawContinuous
     clip: {fileID: 8300000, guid: ad742f491edb6594a9b0528c7d555690, type: 3}
     volume: 0.305
-    pitch: 0
+    pitch: 1
     loop: 1
     startDelay: 1
     source: {fileID: 0}
   - name: BandsawStartup
     clip: {fileID: 8300000, guid: 74359906a8ba0a048a8e9601e7a985ae, type: 3}
     volume: 0.31
-    pitch: 0
+    pitch: 1
     loop: 0
     startDelay: 0
     source: {fileID: 0}
   - name: BandsawWindDown
     clip: {fileID: 8300000, guid: 5a02fbee131416f4eb5a27270f445453, type: 3}
     volume: 0.339
-    pitch: 0
+    pitch: 1
+    loop: 0
+    startDelay: 0
+    source: {fileID: 0}
+  - name: MouseClick_down
+    clip: {fileID: 8300000, guid: a8d07032e771fe94a977f4bae0d56a87, type: 3}
+    volume: 0.488
+    pitch: 1
+    loop: 0
+    startDelay: 0
+    source: {fileID: 0}
+  - name: MouseClick_up
+    clip: {fileID: 8300000, guid: ef5617395571d844ab94a39643a881b9, type: 3}
+    volume: 0.508
+    pitch: 1
     loop: 0
     startDelay: 0
     source: {fileID: 0}

@@ -84,7 +84,7 @@ public class VRSnapPoint : MonoBehaviour
         // disengage the item if there is an item engaged and item is being picked up
         else if (snapPointOccipied && currentSnappedItem.GetComponent<Interactable>().attachedToHand)
         {
-            DisengageItem(currentSnappedItem);
+            DisengageItem();
         }
     }
 
@@ -102,7 +102,7 @@ public class VRSnapPoint : MonoBehaviour
         engageEvents.Invoke();
     }
 
-    private void DisengageItem(GameObject canister)
+    private void DisengageItem()
     {
         fixedJoint.connectedBody = null;
         snapPointOccipied = false;
@@ -113,7 +113,7 @@ public class VRSnapPoint : MonoBehaviour
     {
         if (snapPointOccipied && currentSnappedItem != null)
         {
-            DisengageItem(currentSnappedItem);
+            DisengageItem();
         }
     }
 
@@ -136,6 +136,16 @@ public class VRSnapPoint : MonoBehaviour
         }
     }
 
+    public void EvictCurrentItem()
+    {
+        Debug.Log("Evicting current item in snappoint");
+        if (snapPointOccipied)
+        {
+            fixedJoint.connectedBody = null;
+            currentSnappedItem = null;
+            snapPointOccipied = false;
+        }
+    }
 }
 
 // can pick up block while being drilled

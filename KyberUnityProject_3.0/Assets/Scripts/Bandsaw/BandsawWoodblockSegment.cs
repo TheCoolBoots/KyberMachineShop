@@ -107,10 +107,12 @@ public class BandsawWoodblockSegment : MonoBehaviour
                     leftBlock.GetComponent<Rigidbody>().useGravity = true;
                     leftBlock.GetComponent<Rigidbody>().isKinematic = false;
 
-                    parentContainer.GetComponent<Interactable>().enabled = false;
+                    /*parentContainer.GetComponent<Interactable>().enabled = false;
                     parentContainer.GetComponent<Collider>().enabled = false;
                     Debug.Log("Releasing sub-woodblocks");
-                    Destroy(gameObject);
+                    
+                    gameObject.SetActive(false);*/
+                    parentContainer.SetActive(false);
                 }
             }
             else

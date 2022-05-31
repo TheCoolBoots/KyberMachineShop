@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Bandsaw : MonoBehaviour
 {
-    [SerializeField] private VRSnapPoint snapPoint;
+    [SerializeField] private GameObject snapPointGO;
+    private VRSnapPoint snapPoint;
+    public Vector3 snapPointPos;
+
+    private void Awake()
+    {
+        snapPoint = snapPointGO.GetComponent<VRSnapPoint>();
+        snapPointPos = snapPointGO.transform.localPosition;
+    }
 
     public void OnPowerOn()
     {
@@ -15,19 +23,9 @@ public class Bandsaw : MonoBehaviour
     }
     public void OnPowerOff()
     {
-        if (snapPoint.snapPointOccipied)
-        {
-            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), snapPoint.currentSnappedItem.GetComponent<Collider>(), false);
-        }
+        Debug.Log("resetting position of snappoint");
+        snapPointGO.transform.localPosition = snapPointPos;
+
     }
 
-    public void OnWoodblockSnapEngage()
-    {
-        //snapPoint.currentSnappedItem.GetComponent<Rigidbody>().useGravity = false;
-    }
-
-    public void OnWoodblockSnapDisengage()
-    {
-        //snapPoint.currentSnappedItem.GetComponent<Rigidbody>().useGravity = true;
-    }
 }

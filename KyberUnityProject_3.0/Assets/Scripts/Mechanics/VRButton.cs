@@ -9,7 +9,7 @@ public class VRButton : MonoBehaviour
     [SerializeField] private float threshold = 0.1f;
     [SerializeField] private float deadzone = 0.025f;
 
-    private bool isPressed;
+    public bool isPressed;
     private Vector3 startPos;
     private ConfigurableJoint joint;
 
