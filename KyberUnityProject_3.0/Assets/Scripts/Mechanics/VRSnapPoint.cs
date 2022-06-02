@@ -127,14 +127,6 @@ public class VRSnapPoint : MonoBehaviour
         return false;
     }
 
-    public void SetSnapPointLock(bool locked)
-    {
-        if(snapPointOccipied && currentSnappedItem.GetComponent<Interactable>() != null)
-        {
-            // if want to lock, disable interactable
-            currentSnappedItem.GetComponent<Interactable>().enabled = !locked;
-        }
-    }
 
     public void EvictCurrentItem()
     {
